@@ -1,18 +1,41 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:shutter_count/state.dart';
 
 class MainScreen extends StatelessWidget {
   const MainScreen({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Color(0xff1f1f1f),
-      body: SafeArea(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [Title(), Expanded(child: Container()), BottomButton()],
+    return ChangeNotifierProvider(
+      create: (context) => MyState(),
+      child: Scaffold(
+        backgroundColor: Color(0xff1f1f1f),
+        body: SafeArea(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              Title(),
+              Body(),
+              Expanded(child: Container()),
+              BottomButton()
+            ],
+          ),
         ),
       ),
+    );
+  }
+}
+
+class Body extends StatelessWidget {
+  const Body({Key key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    final state = Provider.of<MyState>(context);
+
+    return Container(
+      child: Text(state.text),
     );
   }
 }
@@ -61,6 +84,8 @@ class BottomButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final state = Provider.of<MyState>(context);
+
     return Column(
       children: [
         Column(
@@ -79,22 +104,25 @@ class BottomButton extends StatelessWidget {
                 ),
               ),
             ),
-            Container(
-              decoration: BoxDecoration(
-                  color: Color(0xfff4f4f4),
-                  borderRadius: BorderRadius.circular(20)),
-              margin: EdgeInsets.only(top: 25, bottom: 25),
-              width: 200,
-              height: 70,
-              child: Center(
-                child: Text(
-                  'Select image',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                      fontFamily: 'Inter',
-                      color: Color(0xff1f1f1f),
-                      fontSize: 18,
-                      fontWeight: FontWeight.w600),
+            GestureDetector(
+              onTap: () => state.text = "clicked",
+              child: Container(
+                decoration: BoxDecoration(
+                    color: Color(0xfff4f4f4),
+                    borderRadius: BorderRadius.circular(20)),
+                margin: EdgeInsets.only(top: 25, bottom: 25),
+                width: 200,
+                height: 70,
+                child: Center(
+                  child: Text(
+                    'Select image',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                        fontFamily: 'Inter',
+                        color: Color(0xff1f1f1f),
+                        fontSize: 18,
+                        fontWeight: FontWeight.w600),
+                  ),
                 ),
               ),
             ),
