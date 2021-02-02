@@ -14,12 +14,7 @@ class MainScreen extends StatelessWidget {
         body: SafeArea(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              Title(),
-              Body(),
-              Expanded(child: Container()),
-              BottomButton()
-            ],
+            children: [Title(), Expanded(child: Body()), BottomButton()],
           ),
         ),
       ),
@@ -34,9 +29,56 @@ class Body extends StatelessWidget {
   Widget build(BuildContext context) {
     final state = Provider.of<MyState>(context);
 
-    if (state.picked)
-      return Container(
-        child: Text(state.filePath),
+    if (state.model != "")
+      return Center(
+        child: Container(
+          padding: EdgeInsets.all(20),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                'Your',
+                style: TextStyle(
+                    fontFamily: 'Inter',
+                    color: Color(0xfff4f4f4),
+                    fontSize: 25,
+                    fontWeight: FontWeight.w800),
+              ),
+              Text(
+                state.model,
+                style: TextStyle(
+                    fontFamily: 'Inter',
+                    color: Color(0xfff4f4f4),
+                    fontSize: 40,
+                    fontWeight: FontWeight.w800),
+              ),
+              Text(
+                'has taken',
+                style: TextStyle(
+                    fontFamily: 'Inter',
+                    color: Color(0xfff4f4f4),
+                    fontSize: 25,
+                    fontWeight: FontWeight.w800),
+              ),
+              Text(
+                state.count,
+                style: TextStyle(
+                    fontFamily: 'Inter',
+                    color: Color(0xfff4f4f4),
+                    fontSize: 40,
+                    fontWeight: FontWeight.w800),
+              ),
+              Text(
+                'till this picture',
+                style: TextStyle(
+                    fontFamily: 'Inter',
+                    color: Color(0xfff4f4f4),
+                    fontSize: 25,
+                    fontWeight: FontWeight.w800),
+              )
+            ],
+          ),
+        ),
       );
     else
       return Container();
@@ -118,7 +160,7 @@ class BottomButton extends StatelessWidget {
                 height: 70,
                 child: Center(
                   child: Text(
-                    'Select image',
+                    'Select',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                         fontFamily: 'Inter',

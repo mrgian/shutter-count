@@ -5,24 +5,22 @@ import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 
 class MyState with ChangeNotifier {
-  bool _picked = false;
-  bool get picked => _picked;
-
   String _filePath = "";
   String get filePath => _filePath;
 
-  Future pick() async {
-    _picked = false;
-    notifyListeners();
+  String _model = "";
+  String get model => _model;
 
+  String _count = "";
+  String get count => _count;
+
+  Future pick() async {
     File file = await FilePicker.getFile();
 
     if (file != null) {
       _filePath = file.path;
-      _picked = true;
-      notifyListeners();
 
-      readExif(file);
+      await readExif(file);
     }
   }
 
@@ -30,9 +28,9 @@ class MyState with ChangeNotifier {
     Map<String, IfdTag> data =
         await readExifFromBytes(await file.readAsBytes());
 
-    for (var key in data.keys) {
-      print(key);
-      print(data[key]);
-    }
+    _model = data["Image Model"].toString();
+    _count = data["MakerNote TotalShutterReleases"].toString();
+
+    notifyListeners();
   }
 }
