@@ -34,9 +34,12 @@ class Body extends StatelessWidget {
   Widget build(BuildContext context) {
     final state = Provider.of<MyState>(context);
 
-    return Container(
-      child: Text(state.text),
-    );
+    if (state.picked)
+      return Container(
+        child: Text(state.filePath),
+      );
+    else
+      return Container();
   }
 }
 
@@ -105,7 +108,7 @@ class BottomButton extends StatelessWidget {
               ),
             ),
             GestureDetector(
-              onTap: () => state.text = "clicked",
+              onTap: () => state.pick(),
               child: Container(
                 decoration: BoxDecoration(
                     color: Color(0xfff4f4f4),
