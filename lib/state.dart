@@ -5,7 +5,7 @@ import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:shutter_count/utils/status.dart';
 
-class MyState with ChangeNotifier {
+class MState with ChangeNotifier {
   Status _status = Status.notSelected;
   Status get status => _status;
 
@@ -17,6 +17,7 @@ class MyState with ChangeNotifier {
 
   Future pick() async {
     _status = Status.loading;
+    notifyListeners();
 
     File file = await FilePicker.getFile();
 
@@ -24,6 +25,8 @@ class MyState with ChangeNotifier {
       await readExif(file);
     else
       _status = Status.error;
+
+    notifyListeners();
   }
 
   Future readExif(File file) async {
