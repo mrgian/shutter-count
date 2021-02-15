@@ -104,13 +104,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.11"
-  flutter_statusbarcolor:
+  flutter_statusbar_manager:
     dependency: "direct main"
     description:
-      name: flutter_statusbarcolor
+      name: flutter_statusbar_manager
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.2.3"
+    version: "2.0.0"
   flutter_test:
     dependency: "direct dev"
     description: flutter
