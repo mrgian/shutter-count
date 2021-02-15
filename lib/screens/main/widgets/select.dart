@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+
 import 'package:shutter_count/state.dart';
 
 class MSelect extends StatelessWidget {
@@ -20,7 +21,7 @@ class MSelect extends StatelessWidget {
                   'Take a picture with your camera and open the RAW file with this button',
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                      fontFamily: 'Inter',
+                      fontFamily: 'TT Firs Neue',
                       color: Color(0xfff4f4f4),
                       fontSize: 18,
                       fontWeight: FontWeight.w600),
@@ -41,7 +42,7 @@ class MSelect extends StatelessWidget {
                     'Select',
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                        fontFamily: 'Inter',
+                        fontFamily: 'TT Firs Neue',
                         color: Color(0xff1f1f1f),
                         fontSize: 18,
                         fontWeight: FontWeight.w600),

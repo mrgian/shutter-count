@@ -13,7 +13,7 @@ class MTitle extends StatelessWidget {
             child: Text(
               'Shutter Count',
               style: TextStyle(
-                  fontFamily: 'Inter',
+                  fontFamily: 'TT Firs Neue',
                   color: Color(0xfff4f4f4),
                   fontSize: 40,
                   fontWeight: FontWeight.w800),
@@ -27,7 +27,7 @@ class MTitle extends StatelessWidget {
               'Find out how many pictures your camera has taken',
               textAlign: TextAlign.center,
               style: TextStyle(
-                  fontFamily: 'Inter',
+                  fontFamily: 'TT Firs Neue',
                   color: Color(0xffb7b7b7),
                   fontSize: 18,
                   fontWeight: FontWeight.w600),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+
 import 'package:shutter_count/state.dart';
 import 'package:shutter_count/utils/status.dart';
 
@@ -30,7 +31,7 @@ class MBody extends StatelessWidget {
                 Text(
                   'Your',
                   style: TextStyle(
-                      fontFamily: 'Inter',
+                      fontFamily: 'TT Firs Neue',
                       color: Color(0xfff4f4f4),
                       fontSize: 25,
                       fontWeight: FontWeight.w800),
@@ -38,7 +39,7 @@ class MBody extends StatelessWidget {
                 Text(
                   state.model,
                   style: TextStyle(
-                      fontFamily: 'Inter',
+                      fontFamily: 'TT Firs Neue',
                       color: Color(0xfff4f4f4),
                       fontSize: 40,
                       fontWeight: FontWeight.w800),
@@ -46,7 +47,7 @@ class MBody extends StatelessWidget {
                 Text(
                   'has taken',
                   style: TextStyle(
-                      fontFamily: 'Inter',
+                      fontFamily: 'TT Firs Neue',
                       color: Color(0xfff4f4f4),
                       fontSize: 25,
                       fontWeight: FontWeight.w800),
@@ -54,7 +55,7 @@ class MBody extends StatelessWidget {
                 Text(
                   state.count,
                   style: TextStyle(
-                      fontFamily: 'Inter',
+                      fontFamily: 'TT Firs Neue',
                       color: Color(0xfff4f4f4),
                       fontSize: 40,
                       fontWeight: FontWeight.w800),
@@ -62,7 +63,7 @@ class MBody extends StatelessWidget {
                 Text(
                   'pictures',
                   style: TextStyle(
-                      fontFamily: 'Inter',
+                      fontFamily: 'TT Firs Neue',
                       color: Color(0xfff4f4f4),
                       fontSize: 25,
                       fontWeight: FontWeight.w800),
