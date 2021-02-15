@@ -6,6 +6,7 @@ import 'package:shutter_count/screens/main/widgets/select.dart';
 import 'package:shutter_count/screens/main/widgets/title.dart';
 
 import 'package:shutter_count/state.dart';
+import 'package:shutter_count/utils/colors.dart';
 
 class MainScreen extends StatelessWidget {
   const MainScreen({Key key}) : super(key: key);

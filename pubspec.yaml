@@ -16,6 +16,7 @@ dependencies:
   provider: ^4.3.3
   file_picker: ^1.13.3
   exif: ^1.0.3
+  flutter_statusbarcolor: ^0.2.3
 
 dev_dependencies:
   flutter_test:
