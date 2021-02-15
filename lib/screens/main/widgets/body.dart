@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import 'package:shutter_count/state.dart';
+import 'package:shutter_count/utils/colors.dart';
 import 'package:shutter_count/utils/status.dart';
 
 class MBody extends StatelessWidget {
@@ -32,7 +33,7 @@ class MBody extends StatelessWidget {
                   'Your',
                   style: TextStyle(
                       fontFamily: 'TT Firs Neue',
-                      color: Color(0xfff4f4f4),
+                      color: MColors.black,
                       fontSize: 25,
                       fontWeight: FontWeight.w800),
                 ),
@@ -40,7 +41,7 @@ class MBody extends StatelessWidget {
                   state.model,
                   style: TextStyle(
                       fontFamily: 'TT Firs Neue',
-                      color: Color(0xfff4f4f4),
+                      color: MColors.black,
                       fontSize: 40,
                       fontWeight: FontWeight.w800),
                 ),
@@ -48,7 +49,7 @@ class MBody extends StatelessWidget {
                   'has taken',
                   style: TextStyle(
                       fontFamily: 'TT Firs Neue',
-                      color: Color(0xfff4f4f4),
+                      color: MColors.black,
                       fontSize: 25,
                       fontWeight: FontWeight.w800),
                 ),
@@ -56,7 +57,7 @@ class MBody extends StatelessWidget {
                   state.count,
                   style: TextStyle(
                       fontFamily: 'TT Firs Neue',
-                      color: Color(0xfff4f4f4),
+                      color: MColors.black,
                       fontSize: 40,
                       fontWeight: FontWeight.w800),
                 ),
@@ -64,7 +65,7 @@ class MBody extends StatelessWidget {
                   'pictures',
                   style: TextStyle(
                       fontFamily: 'TT Firs Neue',
-                      color: Color(0xfff4f4f4),
+                      color: Color(0xff282828),
                       fontSize: 25,
                       fontWeight: FontWeight.w800),
                 )

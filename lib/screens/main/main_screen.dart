@@ -15,7 +15,7 @@ class MainScreen extends StatelessWidget {
     return ChangeNotifierProvider(
       create: (context) => MState(),
       child: Scaffold(
-        backgroundColor: Color(0xff1f1f1f),
+        backgroundColor: Color(0xffffffff),
         body: SafeArea(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,

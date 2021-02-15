@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import 'package:shutter_count/state.dart';
+import 'package:shutter_count/utils/colors.dart';
 
 class MSelect extends StatelessWidget {
   const MSelect({Key key}) : super(key: key);
@@ -22,7 +23,7 @@ class MSelect extends StatelessWidget {
                   textAlign: TextAlign.center,
                   style: TextStyle(
                       fontFamily: 'TT Firs Neue',
-                      color: Color(0xfff4f4f4),
+                      color: MColors.black,
                       fontSize: 18,
                       fontWeight: FontWeight.w600),
                 ),
@@ -32,7 +33,7 @@ class MSelect extends StatelessWidget {
               onTap: () => state.pick(),
               child: Container(
                 decoration: BoxDecoration(
-                    color: Color(0xfff4f4f4),
+                    color: MColors.black,
                     borderRadius: BorderRadius.circular(20)),
                 margin: EdgeInsets.only(top: 25, bottom: 25),
                 width: 200,
@@ -43,7 +44,7 @@ class MSelect extends StatelessWidget {
                     textAlign: TextAlign.center,
                     style: TextStyle(
                         fontFamily: 'TT Firs Neue',
-                        color: Color(0xff1f1f1f),
+                        color: MColors.white,
                         fontSize: 18,
                         fontWeight: FontWeight.w600),
                   ),

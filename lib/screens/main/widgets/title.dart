@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shutter_count/utils/colors.dart';
 
 class MTitle extends StatelessWidget {
   const MTitle({Key key}) : super(key: key);
@@ -14,7 +15,7 @@ class MTitle extends StatelessWidget {
               'Shutter Count',
               style: TextStyle(
                   fontFamily: 'TT Firs Neue',
-                  color: Color(0xfff4f4f4),
+                  color: MColors.black,
                   fontSize: 40,
                   fontWeight: FontWeight.w800),
             ),
@@ -28,7 +29,7 @@ class MTitle extends StatelessWidget {
               textAlign: TextAlign.center,
               style: TextStyle(
                   fontFamily: 'TT Firs Neue',
-                  color: Color(0xffb7b7b7),
+                  color: MColors.black,
                   fontSize: 18,
                   fontWeight: FontWeight.w600),
             ),
