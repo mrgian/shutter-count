@@ -22,15 +22,24 @@ class MBody extends StatelessWidget {
       case Status.error:
         return Center(
           child: Container(
-            padding: EdgeInsets.all(20),
-            child: Text(
-              'Sorry your camera is not supported :(',
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                  fontFamily: 'TT Firs Neue',
-                  color: MColors.black,
-                  fontSize: 25,
-                  fontWeight: FontWeight.w800),
+            height: 330,
+            width: 330,
+            //padding: EdgeInsets.all(20),
+            decoration: BoxDecoration(
+                color: MColors.black, borderRadius: BorderRadius.circular(20)),
+            child: Center(
+              child: Container(
+                padding: EdgeInsets.all(20),
+                child: Text(
+                  'Sorry your camera is not supported :(',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                      fontFamily: 'TT Firs Neue',
+                      color: MColors.white,
+                      fontSize: 25,
+                      fontWeight: FontWeight.w800),
+                ),
+              ),
             ),
           ),
         );
@@ -38,7 +47,11 @@ class MBody extends StatelessWidget {
       case Status.done:
         return Center(
           child: Container(
-            padding: EdgeInsets.all(20),
+            height: 330,
+            width: 330,
+            //padding: EdgeInsets.all(20),
+            decoration: BoxDecoration(
+                color: MColors.black, borderRadius: BorderRadius.circular(20)),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -46,7 +59,7 @@ class MBody extends StatelessWidget {
                   'Your',
                   style: TextStyle(
                       fontFamily: 'TT Firs Neue',
-                      color: MColors.black,
+                      color: MColors.white,
                       fontSize: 25,
                       fontWeight: FontWeight.w800),
                 ),
@@ -54,7 +67,7 @@ class MBody extends StatelessWidget {
                   state.model,
                   style: TextStyle(
                       fontFamily: 'TT Firs Neue',
-                      color: MColors.black,
+                      color: MColors.white,
                       fontSize: 40,
                       fontWeight: FontWeight.w800),
                 ),
@@ -62,7 +75,7 @@ class MBody extends StatelessWidget {
                   'has taken',
                   style: TextStyle(
                       fontFamily: 'TT Firs Neue',
-                      color: MColors.black,
+                      color: MColors.white,
                       fontSize: 25,
                       fontWeight: FontWeight.w800),
                 ),
@@ -70,15 +83,15 @@ class MBody extends StatelessWidget {
                   state.count,
                   style: TextStyle(
                       fontFamily: 'TT Firs Neue',
-                      color: MColors.black,
-                      fontSize: 40,
+                      color: MColors.white,
+                      fontSize: 55,
                       fontWeight: FontWeight.w800),
                 ),
                 Text(
                   'pictures',
                   style: TextStyle(
                       fontFamily: 'TT Firs Neue',
-                      color: Color(0xff282828),
+                      color: MColors.white,
                       fontSize: 25,
                       fontWeight: FontWeight.w800),
                 )

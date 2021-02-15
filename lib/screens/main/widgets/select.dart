@@ -19,7 +19,7 @@ class MSelect extends StatelessWidget {
               padding: EdgeInsets.only(top: 10, left: 40, right: 40),
               child: Center(
                 child: Text(
-                  'Take a picture with your camera and open the RAW file with this button',
+                  'Take a RAW picture with your camera and open it here',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                       fontFamily: 'TT Firs Neue',
