@@ -20,7 +20,20 @@ class MBody extends StatelessWidget {
         return Center(child: CircularProgressIndicator());
         break;
       case Status.error:
-        return Text('Error');
+        return Center(
+          child: Container(
+            padding: EdgeInsets.all(20),
+            child: Text(
+              'Sorry your camera is not supported :(',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                  fontFamily: 'TT Firs Neue',
+                  color: MColors.black,
+                  fontSize: 25,
+                  fontWeight: FontWeight.w800),
+            ),
+          ),
+        );
         break;
       case Status.done:
         return Center(
