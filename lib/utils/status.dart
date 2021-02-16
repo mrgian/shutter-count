@@ -1,1 +1,1 @@
-enum Status { notSelected, loading, error, done }
+enum Status { notSelected, loading, notSupported, badFormat, error, done }

@@ -20,17 +20,24 @@ class MState with ChangeNotifier {
     _status = Status.loading;
     notifyListeners();
 
-    File file = await FilePicker.getFile();
+    try {
+      File file = await FilePicker.getFile();
 
-    if (file != null)
-      await readExif(file);
-    else
+      if (file != null) {
+        if (file.path.endsWith('jpg') || file.path.endsWith('png'))
+          _status = Status.badFormat;
+        else
+          await _readExif(file);
+      } else
+        _status = Status.error;
+    } on Exception catch (e) {
       _status = Status.error;
+    }
 
     notifyListeners();
   }
 
-  Future readExif(File file) async {
+  Future _readExif(File file) async {
     Map<String, IfdTag> data =
         await readExifFromBytes(await file.readAsBytes());
 
@@ -38,7 +45,7 @@ class MState with ChangeNotifier {
     _count = data["MakerNote TotalShutterReleases"].toString();
 
     if (_model == "null" || _count == "null")
-      _status = Status.error;
+      _status = Status.notSupported;
     else
       _status = Status.done;
 
