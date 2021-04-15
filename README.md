@@ -1,2 +1,4 @@
-# Shutter Count
-An app to find out how many pictures your camera has taken since you bought it
+<h1 align="center">Shutter Count</h1>
+<h3 align="center">
+Find out how many pictures your camera has taken
+</h3>
